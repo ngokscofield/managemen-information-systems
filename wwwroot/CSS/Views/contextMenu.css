@@ -1,0 +1,76 @@
+﻿#contextMenu {
+    position: absolute;
+    display: none;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.contextMenu:hover {
+    background-color: #c1ddf1;
+    /*background-color: red;*/
+}
+
+.contextMenu {
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    width: 97%;
+    margin-left: 2px;
+}
+
+#contextMenuAddReceipt {
+    height: 16px;
+    width: 16px;
+    background-position: 0-2648px !important;
+    display: inline-block;
+    background-image: url(../../Contents/Images/IconSprite.png) !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: -3px 2px;
+}
+
+#contextMenuAddEx {
+    height: 16px;
+    width: 16px;
+    background-position: 0-2648px !important;
+    display: inline-block;
+    background-image: url(../../Contents/Images/IconSprite.png) !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: -3px 2px;
+}
+
+#contextMenuDuplicate {
+    height: 16px;
+    width: 16px;
+    background-position: 0-1888px !important;
+    display: inline-block;
+    background-image: url(../../Contents/Images/IconSprite.png) !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: -3px 2px;
+}
+
+#contextMenuEdit {
+    height: 16px;
+    width: 16px;
+    background-position: 0-2648px !important;
+    display: inline-block;
+    background: url(/Contents/Images/Edit16.png) no-repeat 50% 50% !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: -3px 2px;
+}
+
+#contextMenuDelete {
+    height: 16px;
+    width: 16px;
+    background-position: 0-2680px !important;
+    display: inline-block;
+    background-image: url(../../Contents/Images/IconSprite.png) !important;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: -3px 2px;
+}

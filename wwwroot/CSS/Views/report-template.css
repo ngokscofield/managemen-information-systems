@@ -1,0 +1,181 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.loading {
+    position: relative;
+}
+
+table.loading tbody:after, *.loading:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url('/Contents/Icons/loadingData2.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    content: "";
+}
+
+#header {
+    padding: 5px;
+    position: relative;
+}
+
+    #header #header-left {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+    #header #header-right {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+        #header #header-right #templateID {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #header #header-right #description {
+            text-align: center;
+            font-style: italic;
+        }
+
+#main {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+    #main #report-title {
+        text-align: center;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+        #main #report-title #title {
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        #main #report-title #desc-detail {
+            font-style: italic;
+        }
+
+    #main #report-table {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+#report-table, th, td {
+    border: 1px solid black;
+}
+
+    #report-table th {
+        text-align: center;
+    }
+
+    #report-table #sum td:first {
+        text-align: left;
+    }
+
+.bold-font {
+    font-weight: bold;
+}
+
+#numPageOfReport {
+    margin-top: 5px;
+    margin-left: 3%;
+}
+
+#openCashBookDate {
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+#footer {
+    margin-top: 25px;
+}
+
+.roll {
+    text-align: center;
+}
+
+#createdAt {
+    position: absolute;
+    right: 13%;
+    font-style: italic;
+}
+
+.signature {
+    font-style: italic;
+}
+
+#tblTitle {
+    margin: 0 auto;
+}
+
+    #tblTitle #title {
+        font-style: italic;
+    }
+
+.icon-btnPrintReport {
+    background: url(../../Contents/Images/IconSprite.png) no-repeat;
+    /*margin: 8px;
+    width: 60px;
+    height: 19px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid #007bff;*/
+    background-position: 1px -992px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 16px;
+    width: 16px;
+}
+
+/* Chuẩn bị style trước khi in */
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+
+    @page {
+        size: landscape;
+        margin: 0cm 2cm 1cm 1cm
+    }
+
+    body {
+        margin: 1.6cm;
+    }
+
+    #morepage {
+        display: block;
+    }
+
+    #hideBtn, .gridPanel-header-item-filter {
+        display: none;
+    }
+
+    .table {
+        width: auto;
+    }
+}
+
+.table th, .table td, .table tr {
+    border: 1px solid black !important;
+}
+
+.form {
+    height: auto;
+}

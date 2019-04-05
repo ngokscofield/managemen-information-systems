@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cập nhật thông tin công ty</title>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="../CSS/lib/animation.css" rel="stylesheet" />
+    <link href="../CSS/lib/glyphicon.css" rel="stylesheet" />
+    <link href="../CSS/lib/icons.css" rel="stylesheet" />
+    <link href="../CSS/Views/login.css" rel="stylesheet" />
+    <link href="../CSS/Views/control.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../Contents/Images/Register/banner_logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="../CSS/Views/loading.css" rel="stylesheet" />
+</head>
+<body id="body-update-company">
+    <div id="ajax_loader" class="ajax-load-qa"> &nbsp;</div>
+    <div id="wraper">
+        <div id="header">
+            <div style="width: 250px">
+                <a href="https://www.misa.com.vn">
+                    <div class="page-content logo" style="width: 250px">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="register-content">
+            <div class="container body-content">
+                <div class="page-content">
+                    <div class="container-reg">
+                        <div class="content-left">
+                            <img src="../Contents/Images/Banner/Banner2.jpg" alt="register" />
+                            <div id="text">
+                                <h4>PHẦN MỀM<br>KẾ TOÁN DOANH NGHIỆP</h4>
+                                <ul>
+                                    <li>Đáp ứng đầy đủ nghiệp vụ quản trị tài chính - kế toán theo đúng thông tư 133/2016/TT-BTC và 200/2014/TT-BTC</li>
+                                    <li>Quản trị tình hình tài chính kế toán mọi lúc, mọi nơi qua mobile</li>
+                                    <li>Tích hợp trực tiếp phần mềm hóa đơn điện tử, ngân hàng điện tử, kết nối thẳng với Tổng cục Thuế giúp tiết kiệm nhiều thời gian, chi phí kê khai thuế, sử dụng hóa đơn, giao dịch ngân hàng.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="formRegister" class="content-right">
+
+                            <div class="field-text-head">
+                                Cập nhật thông tin công ty
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="color: #FF0000;">
+                                        <div class="clear"></div>
+                                        <div id="boxValidationSummary" class="sumary-validate" style="display:none;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Điện thoại di động-->
+                            <div class="field-text" style="padding-bottom: 0;">Điện thoại</div>
+                            <div class="row">
+                                <div class="col-md-3 no-padding-right r-contact-prefix">
+                                    <div class="code-vn-cls box-country-select">Việt Nam </div>
+                                </div>
+                                <div class="col-md-9 no-padding-left r-contact-name">
+                                    <span id="txtContactMobile" class="riSingle RadInput RadInput_Office2010Silver wrap-control" style="width:100%;">
+                                        <input id="tel" name="tel" size="20" maxlength="100" class="riTextBox riEnabled text-field-custom-cls text-required" tabindex="15" type="tel" autofocus>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+
+                            <!--Mã công ty-->
+                            <div class="row" style="margin-top:4px;">
+                                <div class="col-md-12">
+                                    <div class="field-text">Mã</div>
+                                    <span style="width:100%;">
+                                        <input id="company-code" name="company-code" size="20" maxlength="100" class="riTextBox riEnabled text-field-custom-cls text-required" tabindex="20" type="text">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <!--Mã số thuế-->
+                            <div class="row" style="margin-top:4px;">
+                                <div class="col-md-12">
+                                    <div class="field-text">Mã số thuế</div>
+                                    <span style="width:100%;">
+                                        <input id="tax-code" name="tax-code" size="20" maxlength="100" class="riTextBox riEnabled text-field-custom-cls text-required" tabindex="20" type="text">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <!--Email-->
+                            <div class="row" style="margin-top:4px;">
+                                <div class="col-md-12">
+                                    <div class="field-text">Email</div>
+                                    <span style="width:100%;">
+                                        <input id="company-email" name="company-email" size="20" maxlength="100" class="riTextBox riEnabled text-field-custom-cls text-required" tabindex="20" type="Email">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+
+                            <!--Số tài khoản ngân hàng công ty-->
+                            <div class="row" style="margin-top:4px;">
+                                <div class="col-md-12">
+                                    <div class="field-text">Số TK ngân hàng</div>
+                                    <span style="width:100%;">
+                                        <input id="bank-account" name="bank-account" size="20" maxlength="100" class="riTextBox riEnabled text-field-custom-cls text-required" tabindex="20" type="text">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <!--Địa chỉ-->
+                            <div class="row" style="margin-top:4px;">
+                                <div class="col-md-12">
+                                    <div class="field-text">Địa chỉ</div>
+                                    <span style="width:100%;">
+                                        <input id="company-address" name="company-address" size="20" maxlength="100" class="riTextBox riEnabled text-field-custom-cls text-required" tabindex="20" type="text">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <p style="font-weight:bold;" id="notifi-update-company"></p>
+                            <div class="row" style="padding-top:30px">
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-6 no-padding-left no-padding-right">
+                                    <div class="register-button-wrapper" id="register-button-wrapper-firstPage">
+                                        <span id="btnRegister" tabindex="50" class="RadButton RadButton_Office2010Silver rbSkinnedButton button-register inactive-button">
+                                            <input style="border:0px;" class="rbDecorated" type="button" name="save-company-information" id="update-information-company-submit" value="Lưu" tabindex="-1">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="display-update">
+                <a href="../index.html" style="text-decoration: none; font-size:15px;" id="home">Trang chủ</a>
+                &nbsp
+                <a href="./login.html" style="text-decoration: none; font-size:15px;" id="logout">Đăng xuất</a>
+            </div>
+        </div>
+        <div class="footer-contact-content">
+            <div class="footer-wrapper">
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA HÀ NỘI
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>024 3762 7891</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@han.misa.com.vn">shsales@han.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA TP HỒ CHÍ MINH
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>028 5431 8318</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@hcm.misa.com.vn">shsales@hcm.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA ĐÀ NẴNG
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>0236 366 7555</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@dng.misa.com.vn">shsales@dng.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA BUÔN MA THUỘT
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>0262 381 7400</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@bmt.misa.com.vn">shsales@bmt.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA CẦN THƠ
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>0292 376 6468</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@cth.misa.com.vn">shsales@cth.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="contact-item">
+                <div class="container" style="text-align: center">
+                    <div class="row">
+                        <div class="col-md-12 no-padding-left no-padding-right">
+                            <p class="copyright"><span id="pcopyright">Copyright © 2017 - 2018 MISA JSC</span><a class="a-footer" target="_blank" href="http://www.misa.com.vn">www.misa.com.vn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/lib/jquery-3.3.1.js"></script>
+    <script src="../Scripts/lib/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/lib/bootstrap.min.js"></script>
+    <script src="../Scripts/lib/popper.min.js"></script>
+    <script src="../Scripts/common/validation.js"></script>
+    <script src="../Scripts/Views/update-company-information.js"></script>
+    <script src="../Scripts/Views/enter.js"></script>
+</body>
+</html>

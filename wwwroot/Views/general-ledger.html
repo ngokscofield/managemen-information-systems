@@ -1,0 +1,761 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Báo cáo</title>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="../CSS/common/jquery-ui-custom.css" rel="stylesheet" />
+    <link href="../CSS/lib/animation.css" rel="stylesheet" />
+    <link href="../CSS/lib/glyphicon.css" rel="stylesheet" />
+    <link href="../CSS/lib/icons.css" rel="stylesheet" />
+    <link href="../CSS/Views/login.css" rel="stylesheet" />
+    <link href="../CSS/Views/control.css" rel="stylesheet" />
+    <link href="../CSS/common/main.css" rel="stylesheet" />
+    <link href="../CSS/common/control.css" rel="stylesheet" />
+    <link href="../CSS/common/combobox.css" rel="stylesheet" />
+    <link href="../CSS/Views/header.css" rel="stylesheet" />
+    <link href="../CSS/common/panelSubMenu.css" rel="stylesheet" />
+    <link href="../CSS/Views/rae.css" rel="stylesheet" />
+    <link href="../CSS/lib/icons.css" rel="stylesheet" />
+    <link href="../CSS/Views/dropDownMenu.css" rel="stylesheet" />
+    <link href="../CSS/Views/general-ledgers.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wraper">
+        <!-- Phần header của trang -->
+        <div id="header">
+            <div style="width: 200px">
+                <a href="receipt.html">
+                    <div class="page-content logo" style="width: 200px">
+                    </div>
+                </a>
+            </div>
+            <div class="header-user-info">
+                <div class="user-info-box">
+                    <span class="avatar-user"></span>
+                    <span class="user-info" id="set-info"></span>
+                </div>
+                <div class="user-menu-box hide-if-outside">
+                    <div id="btnChangePassword" command="ChangePassword" class="user-menu-item">Thay đổi mật khẩu</div>
+                    <div id="btnLogout" class="user-menu-item">Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+        <!-- Phần thân trang -->
+        <div class="register-content">
+            <!-- Thanh menu trái -->
+            <div class="main-nav">
+                <ul class="menu-parent">
+                    <li class="menu-parent-li-first">
+                        <a title="Tổng quan" class="">
+                            <table class="li-menu-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="cls-icon-menu-parent">
+                                            <div class="cls-icon-menu cls-index"></div>
+                                        </td>
+                                        <td class="cls-text-menu-right">Bàn làm việc</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </li>
+                    <li class="wrap-menu-children-report">
+                        <a title="Báo cáo" class="">
+                            <table class="li-menu-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="cls-icon-menu-parent">
+                                            <div class="cls-icon-menu cls-report"></div>
+                                        </td>
+                                        <td class="cls-text-menu-right">Báo cáo</td>
+                                        <td class="trigger-report rotate" style="width: 20px;">
+                                            <div class="menu-has-children-close"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                        <div class="wrap-menu-children" style="">
+                            <ul class="menu-children">
+                                <li class="menu-children-li-first" style="" id="menu-item-report-cashbook">
+                                    <a href="#report-revenue" title="">
+                                        <table class="li-menu-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="cls-icon-menu-parent"></td>
+                                                    <td class="cls-text-menu-right">Sổ quỹ</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="" style="" id="menu-item-report-genenal-ledger">
+                                    <a href="general-ledger.html" title="Mua hàng">
+                                        <table class="li-menu-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="cls-icon-menu-parent"></td>
+                                                    <td class="cls-text-menu-right">Sổ chi tiết quỹ tiền mặt</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a title="Tổng quan" class="">
+                            <table class="li-menu-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="cls-icon-menu-parent">
+                                            <div class="cls-icon-menu cls-discount"></div>
+                                        </td>
+                                        <td class="cls-text-menu-right">Hóa đơn điện tử</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </li>
+                    <li id="menu-item-dictionary">
+                        <a title="Danh mục" class="">
+                            <table class="li-menu-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="cls-icon-menu-parent">
+                                            <div class="cls-icon-menu cls-dictionary"></div>
+                                        </td>
+                                        <td class="cls-text-menu-right">Quản lý hóa đơn</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Tổng quan" class="">
+                            <table class="li-menu-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="cls-icon-menu-parent">
+                                            <div class="cls-icon-menu cls-setting"></div>
+                                        </td>
+                                        <td class="cls-text-menu-right">Công cụ, dụng cụ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Phần nội dung chính -->
+            <div class="main-container">
+                <div>
+                    <form id="frmMain">
+                        <div>
+                            <!-- Phần header nội dung chính -->
+                            <div id="report-container-header">
+                                <div id="btn-param" class="targetNotEffectByMouseUp">
+                                    Chọn tham số
+                                </div>
+                                <span id="lblHeader">Sổ kế toán chi tiết quỹ tiền mặt</span>
+                                <div id="report-header-btn-container">
+                                    <a id="btnRefreshReport" class="report-header-btn">
+                                        <span class="cls-btnWrap">
+                                            <span class="toolbar-item-icon icon-btnHelp"></span>
+                                            <span class="toolbar-item-text">Giúp</span>
+                                        </span>
+                                    </a>
+                                    <a id="btnRefreshReport" class="report-header-btn">
+                                        <span class="cls-btnWrap">
+                                            <span class="toolbar-item-icon icon-btnFeedback"></span>
+                                            <span class="toolbar-item-text">Phản hồi</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Phần thân nội dung chính -->
+                            <div class="frmReport" runat="server">
+                                <!-- Toolbar phía trên bảng chính -->
+                                <div class="toolbar">
+                                    <div class="toolbar-body">
+                                        <div class="report-toolbar-input">
+                                            <div class="mcombobox" dataindex="ReportPeriodName"
+                                                 valuefield="ReportPeriodID" controltype="ComboboxData">
+                                                <div entity="ReportPeriod" controltype="ComboboxData"
+                                                     class="cls-wrapControl-combobox combobox" style="width: 100%">
+                                                    <input class="input-first txtReportPeriod" type="text"
+                                                           controltype="inputCombobox" name="ReportPeriod"
+                                                           dataindex="ReportPeriod" value="" data-type="text" placeholder="Kỳ báo cáo">
+                                                    <div class="combobox-arrow-select trigger-loadData"></div>
+                                                </div>
+                                                <div class="comboboxData-boundlist hide-if-outside"
+                                                     style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="report-toolbar-lbl">Từ</div>
+                                        <div class="report-toolbar-input">
+                                            <div class="cls-wrapControl-combobox combobox" style="position: relative;">
+                                                <input type="text" id="" value=""
+                                                       class="txtFromDate" placeholder="dd-mm-yyyy">
+                                                <div class="btn-customer-icon-16 btn-customer-datepicker-icon" style="position: absolute; top: 3px; right: 5px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="report-toolbar-lbl">Đến</div>
+                                        <div class="report-toolbar-input">
+                                            <div class="cls-wrapControl-combobox combobox" style="width: 100%; position: relative;">
+                                                <input type="text" id="" value=""
+                                                       class="txtToDate" placeholder="dd-mm-yyyy">
+                                                <div class="btn-customer-icon-16 btn-customer-datepicker-icon" style="position: absolute; top: 3px; right: 5px;"></div>
+                                            </div>
+                                        </div>
+
+                                        <a id="btnLoadReport">
+                                            <span class="cls-btnWrap">
+                                                <span class="toolbar-item-text">Lấy dữ liệu</span>
+                                            </span>
+                                        </a>
+                                        <a class="report-toolbar-vertical-line"></a>
+                                        <a id="btnRefreshReport" class="toolbar-item">
+                                            <span class="cls-btnWrap">
+                                                <span class="toolbar-item-icon icon-refresh"></span>
+                                                <span class="toolbar-item-text">Nạp</span>
+                                            </span>
+                                        </a>
+                                        <a id="btnExportReport" class="toolbar-item">
+                                            <span class="cls-btnWrap">
+                                                <span class="toolbar-item-icon icon-btnExport"></span>
+                                                <span class="toolbar-item-text">Xuất khẩu</span>
+                                            </span>
+                                        </a>
+                                        <a id="btnPrintReport" class="toolbar-item">
+                                            <span class="cls-btnWrap">
+                                                <span class="toolbar-item-icon icon-btnPrint"></span>
+                                                <span class="toolbar-item-text">In</span>
+                                            </span>
+                                        </a>
+                                        <a id="btnCancelReport" class="toolbar-item">
+                                            <span class="cls-btnWrap">
+                                                <span class="toolbar-item-icon icon-btnCancel"></span>
+                                                <span class="toolbar-item-text">Đóng</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--Bảng danh sách báo cáo sổ quỹ-->
+                                <div class="cls-gridPanel">
+                                    <table id="tblCustomerList" class="bordered cellpadding-0 cellspacing-0">
+                                        <thead>
+                                            <!-- Header bảng chính -->
+                                            <tr class="gridHeader">
+                                                <th rowspan="2" id='column-header-1' fieldData="PostedDate"
+                                                    DataType="Date"
+                                                    class="gridPanel-header-item-title width-150 no-border-left">
+                                                    Ngày hạch toán<div id='column-header-1-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-2' fieldData="RefDate" DataType="Date"
+                                                    class="gridPanel-header-item-title width-150">
+                                                    Ngày chứng từ<div id='column-header-2-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-3' fieldData="RefNo" DataType="Text"
+                                                    class="gridPanel-header-item-title width-150">
+                                                    Số phiếu thu<div id='column-header-3-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-3' fieldData="RefNo" DataType="Text"
+                                                    class="gridPanel-header-item-title width-150">
+                                                    Số phiếu chi<div id='column-header-3-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-4' fieldData="JournalMemo"
+                                                    DataType="Text" class="gridPanel-header-item-title width-250">
+                                                    Diễn giải<div id='column-header-4-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-5' fieldData="TotalAmount"
+                                                    DataType="Money" class="gridPanel-header-item-title width-150">
+                                                    Tài khoản<div id='column-header-5-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-6' fieldData="AccountObjectName"
+                                                    DataType="Text" class="gridPanel-header-item-title width-150">
+                                                    TK đối ứng<div id='column-header-6-sizer'></div>
+                                                </th>
+                                                <th colspan="2" id='column-header-9' fieldData="RefTypeName"
+                                                    DataType="Text" class="gridPanel-header-item-title width-300">
+                                                    Số phát sinh<div id='column-header-9-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-11' fieldData="Note" DataType="Text"
+                                                    class="gridPanel-header-item-title width-150">
+                                                    Số tồn<div id='column-header-11-sizer'></div>
+                                                </th>
+                                                <th rowspan="2" id='column-header-11' fieldData="Note" DataType="Text"
+                                                    class="gridPanel-header-item-title width-300">
+                                                    Người nhận/Người nộp<div id='column-header-11-sizer'></div>
+                                                </th>
+                                            </tr>
+                                            <tr class="gridHeader">
+                                                <th class="gridPanel-header-item-title">Nợ</th>
+                                                <th class="gridPanel-header-item-title">Có</th>
+                                            </tr>
+
+                                            <tr id="filterElement">
+                                                <th class="no-border-left">
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a> 
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition"
+                                                                   elementtype="filterInput"
+                                                                   fieldname="PostedDate" />
+
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition"
+                                                                   elementtype="filterInput"
+                                                                   fieldname="RefDate" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="RefNoFinance" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="JournalMemo" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition filter-Money"
+                                                                   elementtype="filterInput"
+                                                                   fieldname="TotalAmount" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="AccountObjectName" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="ReasonTypeName" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition"
+                                                                   elementtype="filterInput"
+                                                                   fieldname="CashBookPostedDate" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="RefTypeName" />
+                                                        </div>
+
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="CashBookNoFiance" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="gridPanel-header-item-filter">
+                                                        <a class="btn-select-filter" style="font-weight: normal">∗</a>
+                                                        <div class="input-filter">
+                                                            <input class="filter-condition" elementtype="filterInput"
+                                                                   fieldname="AccountObjectAddress" />
+                                                        </div>
+                                                    </div>
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbodyRAE">
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11/02/2011</td>
+                                                <td>13/02/2011</td>
+                                                <td>PT011</td>
+                                                <td></td>
+                                                <td>Rút tiền gửi ngân hàng</td>
+                                                <td>111</td>
+                                                <td>1561</td>
+                                                <td>0</td>
+                                                <td>4.618.000</td>
+                                                <td>11.000.000</td>
+                                                <td>Nguyễn Văn Thảo</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Toolbar phía dưới bảng chính -->
+                                <div class="cls-bottomToolbar">
+                                    <div class="cls-bottomToolbar-body">
+                                        <div class="bottomToolbar-left">
+                                            <a id="tbarPageFirst"
+                                               class="tbar-item-control margin-right-8 tbar-item-control-active"
+                                               title="Trang đầu">
+                                                <div class="tbar-icon-16 tbar-page-first tbar-item-disabled"></div>
+                                            </a>
+                                            <a id="tbarPagePrev"
+                                               class="tbar-item-control margin-right-2 tbar-item-control-active"
+                                               title="Trang trước">
+                                                <div class="tbar-icon-16 tbar-page-prev tbar-item-disabled"></div>
+                                            </a>
+                                            <a class="tbar-item-control">
+                                                <div class="tbar-separator-horizoltal"></div>
+                                            </a>
+                                            <a class="tbar-item-control margin-right-2">
+                                                <div class="tbar-text-page">Trang</div>
+                                            </a>
+                                            <div class="tbar-numberPage-box margin-right-2">
+                                                <input id="currentPage" type="text"
+                                                       style="width: 40px; height: 24px; margin-right: 4px; padding-left: 4px;"
+                                                       value="1" />
+                                                <span>trên</span> <span id="totalPage">1</span>
+                                            </div>
+                                            <a class="tbar-item-control margin-right-2">
+                                                <div class="tbar-separator-horizoltal"></div>
+                                            </a>
+                                            <a id="tbarPageNext"
+                                               class="tbar-item-control margin-right-8 tbar-item-control-active"
+                                               title="Trang kế">
+                                                <div class="tbar-icon-16 tbar-page-next tbar-item-disabled"></div>
+                                            </a>
+                                            <a id="tbarPageLast"
+                                               class="tbar-item-control margin-right-2 tbar-item-control-active"
+                                               title="Trang cuối">
+                                                <div class="tbar-icon-16 tbar-page-last tbar-item-disabled"></div>
+                                            </a>
+                                            <a class="tbar-item-control margin-right-2">
+                                                <div class="tbar-separator-horizoltal"></div>
+                                            </a>
+                                            <a id="tbarRefresh"
+                                               class="tbar-item-control margin-right-2 tbar-item-control-active"
+                                               title="Tải lại">
+                                                <div class="tbar-icon-16 tbar-refresh"></div>
+                                            </a>
+                                            <a class="tbar-item-control margin-right-8">
+                                                <div class="tbar-separator-horizoltal"></div>
+                                            </a>
+                                            <div id="box-triggerWrap" class="targetNotEffectByMouseUp">
+                                                <div class="tbar-combox-triggerWrap targetNotEffectByMouseUp"
+                                                     id="recordSelect">
+                                                    <div class="input-trigger targetNotEffectByMouseUp">
+                                                        <input id="inputTotalRecord" class="targetNotEffectByMouseUp"
+                                                               disabled value="100"
+                                                               style="width: 36px; text-align: center; height: 22px;" />
+                                                    </div>
+                                                    <div id="arrow-combo-trigger" class="targetNotEffectByMouseUp">
+                                                    </div>
+                                                </div>
+                                                <div id="numberRecordSelection" class="hide-if-outside"
+                                                     style="display: none;">
+                                                    <a class="record-select-item" item-value="25">25</a>
+                                                    <a class="record-select-item" item-value="50">50</a>
+                                                    <a class="record-select-item" item-value="100">100</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomToolbar-right">
+                                            <span>
+                                                Hiển thị <span id="startRecord"></span> - <span id="endRecord"></span>
+                                                trên <span id="totalRecord"></span> kết quả
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form chọn thông số cho sổ chi tiết quỹ tiền mặt -->
+    <div id="frmCashBook" title="Sổ chi tiết quỹ tiền mặt">
+        <!-- Main menu -->
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <!--Thông tin chung-->
+            <div class="row">
+                <div class="col-md-2">Chi nhánh</div>
+                <div class="col-md-10">
+                    <div class="mcombobox" dataindex="DepartmentName" valueField="DepartmentID"
+                         controltype="ComboboxData">
+                        <div entity="Department" controltype="ComboboxData" class="cls-wrapControl-combobox combobox"
+                             style="width: 100%">
+                            <input type="text" id="txtDepartmentNameCashBook" controltype="inputCombobox"
+                                   name="DepartmentName" dataindex="DepartmentName" value="" data-type="text">
+                            <div class="combobox-arrow-select trigger-loadData"></div>
+                        </div>
+                        <div class="comboboxData-boundlist hide-if-outside" style="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="general-parameter-info row">
+                <div class="general-info w-100">
+                    <fieldset>
+                        <legend> Tham số </legend>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-2">Kỳ báo cáo</div>
+                                <div class="col-md-10">
+                                    <div class="mcombobox" dataindex="ReportPeriodName" valueField="ReportPeriodID"
+                                         controltype="ComboboxData">
+                                        <div entity="ReportPeriod" controltype="ComboboxData"
+                                             class="cls-wrapControl-combobox combobox" style="width: 100%">
+                                            <input class="txtReportPeriodName" type="text" id="" controltype="inputCombobox"
+                                                   name="ReportPeriod" dataindex="ReportPeriod" value=""
+                                                   data-type="text">
+                                            <div class="combobox-arrow-select trigger-loadData"></div>
+                                        </div>
+                                        <div id="accountingPeriod" class="comboboxData-boundlist hide-if-outside"
+                                             style="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="lblFromDate" class="col-md-2">Từ</div>
+                                <div class="col-md-4">
+                                    <div class="">
+                                        <div class="cls-wrapControl-combobox combobox" style="width: 100%">
+                                            <input type="text" id="" value="" class="txtFromDate">
+                                            <div class="btn-customer-icon-16 btn-customer-datepicker-icon" style="position: absolute; top: 5px; right: 5px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="lblToDate" class="col-md-2" style="padding-left: 8px;">Đến</div>
+                                <div class="col-md-4">
+                                    <div class="">
+                                        <div class="cls-wrapControl-combobox combobox" style="width: 100%">
+                                            <input type="text" id="" value="" class="txtToDate">
+                                            <div class="btn-customer-icon-16 btn-customer-datepicker-icon" style="position: absolute; top: 5px; right: 5px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div id="lblParameterCurrenyID" class="col-md-2">Loại tiền</div>
+                                <div class="col-md-4">
+                                    <div class="mcombobox" dataindex="CurrencyName" valueField="CurrencyID"
+                                         controltype="ComboboxData">
+                                        <div entity="Currency" controltype="ComboboxData"
+                                             class="cls-wrapControl-combobox combobox" style="width: 100%">
+                                            <input type="text" id="txtCurrencyName" controltype="inputCombobox"
+                                                   name="Currency" dataindex="Currency" value="" data-type="data">
+                                            <div class="combobox-arrow-select trigger-loadData"></div>
+                                        </div>
+                                        <div class="comboboxData-boundlist hide-if-outside" style="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="ui-dialog-buttonset" style="margin-top: 8px;">
+            <button type="button" id="btnCLearParam" class="btn-customer" style="width: 112px; margin-left: unset;">
+
+                <div class="btn-customer-16-body">
+                    <div class="btn-customer-icon-16 btn-customer-clear-icon"></div>
+                    <div class="btn-customer-text">Xóa điều kiện</div>
+                </div>
+            </button>
+            <button type="button" id="btnCancelParam" class="btn-customer"
+                    style="width: 75px; float: right; margin-left: 10px;">
+
+                <div class="btn-customer-16-body">
+                    <div class="btn-customer-icon-16 btn-customer-cancel-icon"></div>
+                    <div class="btn-customer-text">Hủy bỏ</div>
+                </div>
+            </button>
+            <button type="button" id="btnAcceptParam" class="btn-customer" style="width: 75px; float: right;">
+                <div class="btn-customer-16-body">
+                    <div class="btn-customer-icon-16 btn-customer-accept-icon"></div>
+                    <div class="btn-customer-text">Đồng ý</div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <script src="../Scripts/lib/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/lib/jquery-ui.js"></script>
+    <script src="../Scripts/lib/bootstrap.min.js"></script>
+    <script src="../Scripts/lib/popper.min.js"></script>
+    <script src="../Scripts/common/data.js"></script>
+    <script src="../Scripts/common/base.js"></script>
+    <script src="../Scripts/common/enum.js"></script>
+    <script src="../Scripts/common/validation.js"></script>
+    <script src="../Scripts/common/common.js"></script>
+    <script src="../Scripts/Controls/controls.js"></script>
+    <script src="../Scripts/common/header.js"></script>
+    <script src="../Scripts/Views/login.js"></script>
+    <script src="../Scripts/Views/index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../Scripts/Views/general-ledgers.js"></script>
+</body>
+
+</html>

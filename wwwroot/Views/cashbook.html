@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sổ quỹ tiền mặt</title>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="../CSS/lib/animation.css" rel="stylesheet" />
+    <link href="../CSS/lib/glyphicon.css" rel="stylesheet" />
+    <link href="../CSS/lib/icons.css" rel="stylesheet" />
+    <link href="../CSS/Views/login.css" rel="stylesheet" />
+    <link href="../CSS/Views/loading.css" rel="stylesheet" />
+    <link href="../CSS/Views/control.css" rel="stylesheet" />
+    <link href="../CSS/Views/rae.css" rel="stylesheet" />
+    <link href="../CSS/lib/icons.css" rel="stylesheet" />
+    <link href="../CSS/Views/report-template.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="rp-wrapper">
+        <div id="header">
+            <div id="header-left">
+                <b>Công ty Cổ phần XYZ</b><br>
+                Tầng 9 TechnoSoft, ngõ 15 Duy Tân
+            </div>
+            <div id="header-right">
+                <div id="templateID">Mẫu số S07b-DN</div>
+                <div id="description">
+                    <span>(Ban hành theo thông tư số 13/12/2016 TT-BTC</span><br>
+                    <span>Ngày 26-10-2011 của bộ tài chính)</span>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="report-title">
+                <span id="title">Sổ quỹ tiền mặt</span><br>
+                <span id="desc-detail">Loại tiền: VNĐ; Năm 2018</span>
+            </div>
+            <!-- Bảng chứa thông tin các nội dung trong báo cáo tài chính -->
+            <table id="report-table">
+                <tr>
+                    <th rowspan="2" fielddata="PostedDate" id="postedDate">Ngày hạch toán</th>
+                    <th rowspan="2" fielddata="RefDate" id="refDate">Ngày chứng từ</th>
+                    <th colspan="2" fielddata="ReceiptNo" id="receiptNo">Số hiệu chứng từ</th>
+                    <th rowspan="2" fielddata="JournalMemo" id="journalMemo">Diễn giải</th>
+                    <th colspan="3" fielddata="DebitAccount" id="totalAmount">Số tiền</th>
+                    <th rowspan="2" fielddata="CreditAccount" id="accountObjectName">Người nhận, người nộp</th>
+                    <th rowspan="2" fielddata="CreditAccount" id="refTypeName">Loại chứng từ</th>
+                    <th rowspan="2" fielddata="CreditAccount" id="note">Ghi chú</th>
+                </tr>
+                <tr>
+                    <th fieldata="DebitAdded" id="receipt">Thu</th>
+                    <th fieldata="CreditAdded" id="payment">Chi</th>
+                    <th fieldata="DebitAdded" id="receiptAmount">Thu</th>
+                    <th fieldata="CreditAdded" id="paymentAmount">Chi</th>
+                    <th fieldata="CreditAdded" id="inventoryAmount">Tồn</th>
+                </tr>
+            </table>
+            <div id="numPageOfReport">
+                - <span>Sổ này có 01 trang, đánh số từ trang 01 đến 01</span>
+            </div>
+            <div id="openCashBookDate">
+                - <span>Ngày mở sổ: ...............</span>
+            </div>
+        </div>
+        <div id="createdAt">Ngày......tháng.....năm......</div>
+        <div id="footer" class="row">
+            <div id="createdBy" class="roll col-4">
+                <div class="roll-title bold-font">Người lập biểu</div>
+                <div class="signature">(Ký, họ tên)</div>
+            </div>
+            <div id="accounting" class="roll col-4">
+                <div class="roll-title bold-font">Kế toán trưởng</div>
+                <div class="signature">(Ký, họ tên)</div>
+            </div>
+            <div id="director" class="roll col-4">
+                <div class="roll-title bold-font">Giám đốc</div>
+                <div class="signature">(Ký, họ tên)</div>
+            </div>
+        </div>
+        <div id="hideBtn" style="text-align: center; margin: 20px;">
+            Bắt đầu từ ngày
+            <input type="date" name="name" value="" id="dateStart" autofocus />
+            đến ngày
+            <input type="date" name="name" value="" id="dateEnd" />
+            Số bản ghi
+            <input type="text" name="name" value="" id="totalRecord" autocomplete="off"/>
+            <!--<a id="btnViewReport" class="toolbar-item btnPrintReport">
+                <span style="padding: 5px; margin: 5px; border-radius: 5px 5px 5px; border: 1px solid black; cursor: pointer"><span class="toolbar-item-icon icon-btnPrintReport"></span><span class="toolbar-item-text">Xem</span></span>
+            </a>-->
+            <a id="btnPrintReport" class="toolbar-item btnPrintReport" title="Ctrl + P">
+                <span style="padding: 5px; margin: 5px; border-radius: 5px 5px 5px; border: 1px solid black; cursor: pointer"><span class="toolbar-item-icon icon-btnPrintReport"></span><span class="toolbar-item-text">Print</span></span>
+            </a>
+            <!--<a id="btnClearReport" class="toolbar-item btnPrintReport">
+                <span style="padding: 5px; margin: 5px; border-radius: 5px 5px 5px; border: 1px solid black; cursor: pointer"><span class="toolbar-item-icon icon-btnPrintReport"></span><span class="toolbar-item-text">Clear</span></span>
+            </a>-->
+        </div>
+    </div>
+    <script src="../Scripts/lib/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/lib/bootstrap.min.js"></script>
+    <script src="../Scripts/lib/popper.min.js"></script>
+    <script src="../Scripts/common/common.js"></script>
+    <script src="../Scripts/Views/report.js"></script>
+</body>
+</html>

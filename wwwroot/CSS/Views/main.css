@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.main-nav {
+    position: absolute;
+    width: 230px;
+    right: auto;
+    left: 0px;
+    top: 66px;
+    bottom: 0px;
+    margin: 0px;
+    border: 1px solid #808080;
+}
+

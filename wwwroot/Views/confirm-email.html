@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Xác nhận email</title>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="../CSS/lib/animation.css" rel="stylesheet" />
+    <link href="../CSS/lib/glyphicon.css" rel="stylesheet" />
+    <link href="../CSS/lib/icons.css" rel="stylesheet" />
+    <link href="../CSS/Views/login.css" rel="stylesheet" />
+    <link href="../CSS/Views/control.css" rel="stylesheet" />
+    <link href="../CSS/Views/confirm-email.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../Contents/Images/Register/banner_logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body id="body-confirm-email">
+    <div id="ajax_loader" class="ajax-load-qa"> &nbsp;</div>
+    <div id="wraper">
+        <div id="header">
+            <div style="width: 250px">
+                <a href="https://www.misa.com.vn">
+                    <div class="page-content logo" style="width: 250px">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="register-content">
+            <div class="container body-content">
+                <div class="content">
+                    <div class="confirmCode">
+                        <div class="active-head-text">
+                            Chúng tôi vừa gửi một mã kích hoạt tới email của bạn
+                        </div>
+                        <p id="error-active-text" style="color: red; text-align: center;"></p>
+                        <div class="active-text">Nhập mã kích hoạt tại đây</div>
+                        <div class="codes">
+                            <input type="text" name="code1" maxlength="1" id="code1" abc="code" class="active-code" autofocus>
+                            <input type="text" name="code1" maxlength="1" id="code2" abc="code" class="active-code">
+                            <input type="text" name="code1" maxlength="1" id="code3" abc="code" class="active-code">
+                            <input type="text" name="code1" maxlength="1" id="code4" abc="code" class="active-code">
+                        </div>
+                        <p id="error-login" style="color: red;"></p>
+                        <div style="margin-top: 25px; margin-bottom: 60px;">
+                            Bạn không nhận được mã kích hoạt? <span style="color: #0277bd; font-weight: bold; cursor: pointer;">Lấy lại</span>
+                        </div>
+                        <div class="register-button-wrapper" id="register-button-wrapper-firstPage">
+                            <span id="btnLogin" tabindex="50" class="RadButton RadButton_Office2010Silver rbSkinnedButton button-register inactive-button">
+                                <input style="border:0px;" class="rbDecorated" type="button" name="submit" id="submit-active" value="Kích hoạt" tabindex="-1">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-contact-content">
+            <div class="footer-wrapper">
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA HÀ NỘI
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>024 3762 7891</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@han.misa.com.vn">shsales@han.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA TP HỒ CHÍ MINH
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>028 5431 8318</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@hcm.misa.com.vn">shsales@hcm.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA ĐÀ NẴNG
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>0236 366 7555</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@dng.misa.com.vn">shsales@dng.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA BUÔN MA THUỘT
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>0262 381 7400</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@bmt.misa.com.vn">shsales@bmt.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="misa-branch">
+                    <div class="branch-name">
+                        MISA CẦN THƠ
+                    </div>
+                    <div class="branch-info">
+                        <ul>
+
+                            <li class="branch-tel">Tel: <b>0292 376 6468</b></li>
+                            <li class="branch-email">Email: <a href="mailto:shsales@cth.misa.com.vn">shsales@cth.misa.com.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="contact-item">
+                <div class="container" style="text-align: center">
+                    <div class="row">
+                        <div class="col-md-12 no-padding-left no-padding-right">
+                            <p class="copyright"><span id="pcopyright">Copyright © 2017 - 2018 MISA JSC</span><a class="a-footer" target="_blank" href="http://www.misa.com.vn">www.misa.com.vn</a></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/lib/jquery-3.3.1.js"></script>
+    <script src="../Scripts/lib/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/lib/bootstrap.min.js"></script>
+    <script src="../Scripts/lib/popper.min.js"></script>
+    <script src="../Scripts/common/validation.js"></script>
+    <script src="../Scripts/Views/confirm-email.js"></script>
+    <script src="../Scripts/Views/enter.js"></script>
+</body>
+</html>

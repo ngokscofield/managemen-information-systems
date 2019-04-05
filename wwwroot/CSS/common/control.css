@@ -1,0 +1,150 @@
+﻿.row-margin-button-4 {
+    margin-bottom: 4px;
+}
+
+input, textarea {
+    padding: 2px 4px;
+    /*height: 24px;*/
+    border: 1px solid #c1c1c1;
+}
+
+    input:focus {
+        border: 1px solid #157fcc;
+        outline: none !important;
+    }
+
+    textarea:focus {
+        border: 1px solid #157fcc;
+        outline: none !important;
+    }
+
+textarea {
+    min-height: 50px;
+}
+
+.lbl-required {
+    color: #ff0000;
+}
+
+.btn-customer {
+    padding: 3px 3px 3px 3px;
+    height: 25px;
+    background-color: #dddddd !important;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-customer-16-body {
+    height: 16px;
+    width: 80px;
+    display: inline-block;
+    width: auto;
+}
+
+.btn-customer:hover, .btn-customer:focus {
+    /*background: #fff;*/
+    /*background-color: #f8f8f8;*/
+    background-image: -moz-linear-gradient(top,#eff0ec,#e1f2e9) !important;
+    background-image: -webkit-linear-gradient(top,#eff0ec,#e1f2e9) !important;
+    background-image: -o-linear-gradient(top,#eff0ec,#e1f2e9) !important;
+    background-image: linear-gradient(top,#eff0ec,#e1f2e9) !important;
+    background-image: -ms-linear-gradient(top,#eff0ec,#e1f2e9) !important;
+    /*border-color: #0071c1 !important;*/
+    /*outline: none;*/
+}
+
+.btn-customer-text {
+    display: inline-block;
+    height: 16px;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: bold 12px/16px helvetica,arial,verdana,sans-serif;
+    font-weight: normal;
+}
+
+
+.btn-customer-icon-16 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    /*background-image: url('../../Contents/Icons/Save16.png');
+    background-position: center center;
+    background-repeat: no-repeat;*/
+}
+
+.btn-customer-save-icon {
+    background-image: url('../../Contents/Icons/Save16.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-saveadd-icon {
+    background-image: url('../../Contents/Icons/SaveAdd16.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-cancel-icon {
+    background-image: url('../../Contents/Icons/Disable16.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-help-icon {
+    background-image: url('/Contents/Images/IconSprite.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: 0-1600px !important;
+}
+
+.btn-customer-next-icon {
+    background-image: url('../../contents/images/iconsprite.png');
+    background-position: 1px -832px;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-previous-icon {
+    background-image: url('../../contents/images/iconsprite.png');
+    background-position: 1px -1408px;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-datepicker-icon {
+    background-image: url('../../contents/images/iconsprite.png');
+    background-position: 1px -496px;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-accept-icon {
+    background-image: url('../../contents/images/iconsprite.png');
+    background-position: 1px -1841px;
+    background-repeat: no-repeat;
+}
+
+.btn-customer-clear-icon {
+    background-image: url(../../Contents/Images/IconSprite.png) !important;
+    background-repeat: no-repeat;
+    background-position: 0-2584px !important;
+}
+
+.icon-btnExport {
+    background-image: url(../../contents/images/iconsprite.png);
+    background-position: 1px -1710px;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+.icon-btnPrint {
+    background: url(../../Contents/Images/IconSprite.png) no-repeat;
+    background-position: 1px -992px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 16px;
+    width: 16px;
+}

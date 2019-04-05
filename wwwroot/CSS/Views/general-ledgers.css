@@ -1,0 +1,101 @@
+﻿#report-container-header {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+#btn-param {
+    width: 125px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    background-color: #0973b9;
+}
+
+#lblHeader {
+    font-weight: normal;
+    font-size: 18px;
+    /* line-height: 18px; */
+    color: #0072bc;
+    padding: 0 5px 0 5px;
+}
+
+#report-header-btn-container {
+    margin-right: 8px;
+}
+
+.report-header-btn {
+    padding: 2px 4px;
+    background: none;
+    border: 1px solid #ccc;
+    /* border-color: transparent; */
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.frmReport {
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    right: 8px;
+    bottom: 0px;
+    border: 1px solid #ccc;
+}
+
+    .frmReport .toolbar-body {
+        overflow: unset;
+    }
+
+    .frmReport .cls-wrapControl-combobox input {
+        height: 21px;
+        width: 115px;
+    }
+
+    .frmReport .cls-wrapControl-combobox .input-first {
+        width: 150px;
+    }
+
+    .frmReport .cls-wrapControl-combobox .combobox-arrow-select {
+        height: 21px;
+    }
+
+.report-toolbar-lbl {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 10px;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+}
+
+.report-toolbar-input {
+    display: inline-block;
+}
+
+#btnLoadReport {
+    padding: 3px 15px;
+    background-color: #0973b9;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.report-toolbar-vertical-line {
+    height: 19px;
+    width: 2px;
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    margin: 2px 5px;
+}

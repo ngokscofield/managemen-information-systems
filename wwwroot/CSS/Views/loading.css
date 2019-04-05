@@ -1,0 +1,10 @@
+﻿.ajax-load-qa {
+    background: url(http://i.imgur.com/Tn4nzow.gif) no-repeat center center rgba(255,255,255,0.5);
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
